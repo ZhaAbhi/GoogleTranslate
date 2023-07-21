@@ -4,11 +4,15 @@ import SavedScreen from '../screens/SavedScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {colors} from '../utils/colors';
 const Tab = createBottomTabNavigator();
 
 const TabNavigation = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
