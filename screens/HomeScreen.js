@@ -6,20 +6,28 @@ import CopyIcon from 'react-native-vector-icons/MaterialIcons';
 import {colors} from '../utils/colors';
 import {useState} from 'react';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const [enteredText, setEnteredText] = useState('');
   const [resultText, setResultText] = useState('');
 
   return (
     <View style={{flex: 1}}>
       <View style={styles.languageContainer}>
-        <TouchableOpacity style={styles.languageOptions}>
+        <TouchableOpacity
+          style={styles.languageOptions}
+          onPress={() =>
+            navigation.navigate('languageSelect', {title: 'Translate From'})
+          }>
           <Text style={styles.languageOptionsText}>English</Text>
         </TouchableOpacity>
         <View style={styles.arrowContainer}>
           <Icon name="arrowright" size={25} style={{color: 'darkgrey'}} />
         </View>
-        <TouchableOpacity style={styles.languageOptions}>
+        <TouchableOpacity
+          style={styles.languageOptions}
+          onPress={() =>
+            navigation.navigate('languageSelect', {title: 'Translate To'})
+          }>
           <Text style={styles.languageOptionsText}>French</Text>
         </TouchableOpacity>
       </View>

@@ -4,7 +4,7 @@ import SavedScreen from '../screens/SavedScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {colors} from '../utils/colors';
+import HomeNavigation from './HomeNavigation';
 const Tab = createBottomTabNavigator();
 
 const TabNavigation = () => {
